@@ -5,7 +5,7 @@ canvas.height = window.innerHeight
 canvas.width = window.innerWidth
 
 
-/////////////////////////HTML Canvas - Parte 2 - ANIMAÇÃO///////////////////////////////////////////
+/////////////////////////Desafio 1 - Não ultrapassar a tela///////////////////////////////////////////
 
 function animate (){                        //Criação função animate
     requestAnimationFrame(animate)
@@ -24,7 +24,24 @@ function animate (){                        //Criação função animate
  animate()                  //chamou função para executar o script 
 
 
+ //////////////////////// Desafio 2 - Movimentação Vertical ///////////////////////////////////////
 
+
+function animate (){                        //Criação função animate
+    requestAnimationFrame(animate)
+
+    c.clearRect(0,0,innerWidth,innerHeight)
+    
+    c.fillStyle = 'rgba(113,103,253,1)'         
+    c.fillRect (200,dx,200,200)    /* Mudei o dx de posição */
+
+    if((dx+200) > innerHeight){ /* Ao invés de WOtdht colo9quei Height */
+        vx=-vx
+    }
+    else if (dx<0) vx=-vx
+    dx = dx+vx
+ }
+ animate()                 
 
 
 
